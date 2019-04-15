@@ -1,0 +1,521 @@
+/* ========================================================================
+   AJSTD stylesheet
+   v1.031; 4 April 2019
+   (c) 2018-2019 Joaquim Baeta <mail@joaquimbaeta.com>
+  
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+   ------------------------------------------------------------------------
+     
+   Table of contents 
+
+   1.......Typography
+   2.......Global
+   2.1.....Body
+   2.2.....Header
+   2.3.....Navbar
+   2.4.....Footer
+   2.5.....Tooltips
+   3.......Styling
+   4.......Page-specific
+   4.1.....Homepage
+   4.1.1...Homepage issue
+   4.1.2...Homepage table of contents
+   4.1.3...Introduction
+   4.2.....Article page
+   4.3.....Contact page
+   4.4.....Submissions page
+   4.5.....FAQ page
+
+   ======================================================================== */
+
+/* 1. Typography */
+
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i');
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #610c3a;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color: #610c3a;
+}
+
+::selection { /* Style selections */
+    background: #610c3a;
+    color: #fcfcfc;
+}
+
+.border-hover { /* Hover effect on regular links */
+    color: #610c3a;
+    border-bottom: 0px solid #d1b8c5;
+    transition: cubic-bezier(.45,.05,.55,.95) 0.15s;
+}
+
+.border-hover:hover {
+    text-decoration: none;
+    border-bottom: 3px solid #d1b8c5;
+}
+
+.navbar-logo a {
+    border-bottom: 0px solid #d1b8c5;
+    transition: cubic-bezier(.45,.05,.55,.95) 0.15s;
+}
+
+.navbar-logo a:hover {
+    border-bottom: 10px solid #d1b8c5;
+}
+
+.article-summary-title a {
+    color: #161413;
+    border-bottom: 0px solid #d1b8c5;
+    transition: cubic-bezier(.45,.05,.55,.95) 0.15s;
+}
+
+.article-summary-title a:hover {
+    border-bottom: 3px solid #d1b8c5;
+}
+
+.article-details-issue-identifier a {
+    border-bottom: 0px solid #d1b8c5;
+    transition: cubic-bezier(.45,.05,.55,.95) 0.15s;
+}
+
+.article-details-issue-identifier a:hover, .article-details-issue-identifier a:focus {
+    text-decoration: none;
+    border-bottom: 3px solid #d1b8c5;
+}
+
+.article-details-doi a {
+    border-bottom: 0px solid #d1b8c5;
+    transition: cubic-bezier(.45,.05,.55,.95) 0.15s;
+}
+
+.article-details-doi a:hover, .article-details-doi a:focus {
+    text-decoration: none;
+    border-bottom: 3px solid #d1b8c5;
+}
+
+/* 2. Global */
+
+/* 2.1 Body */
+
+body {
+    color: #161413;
+    background-color: #fcfcfc;
+}
+
+/* 2.2 Header */
+
+.main-header {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.navbar-logo {
+    max-width: 80%;
+    padding-top: 2.5rem;
+}
+
+.navbar-logo img {
+    width: 100%;
+}
+
+/* 2.3 Navbar */
+
+#userNav .nav-link, .language-toggle .dropdown-toggle {
+    color: #a18a96;
+}
+
+#userNav .nav-link:hover, .language-toggle .dropdown-toggle:hover, #userNav .nav-link:focus, .language-toggle .dropdown-toggle:focus {
+    outline: 0;
+    border-color: transparent;
+    color: #775d6b;
+}
+
+#primaryNav .nav-link:hover, #primaryNav .nav-link:focus {
+    background: transparent;
+    color: #610c3a;
+    border-color: transparent;
+}
+
+.badge-light {
+    background: #d1b8c5cc;
+    color: #161413aa;
+}
+
+.dropdown-item {
+    transition: ease-in-out 0.2s;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    border-color: transparent;
+    color: #d1b8c5 !important;
+}
+
+#primaryNav .dropdown-menu.show {
+    border-radius: 0px 0px 20px 20px;
+}
+
+#primaryNav .dropdown-item {
+    color: #f9f9f9;
+    transition: ease-in-out 0.2s;
+}
+
+#primaryNav .dropdown-item:hover, #primaryNav .dropdown-item:focus {
+    background: transparent;
+    color: #d1b8c5;
+    border-color: transparent;
+}
+
+/* 2.4 Footer */
+
+#customblock-prefooter {
+    flex-basis: auto;
+    width: 100%;
+    padding: 0;
+}
+
+.site-footer {
+    background: #610c3a;
+    color: #d1b8c5;
+    padding-bottom: 0;
+}
+
+.site-footer a {
+    color: #f9f9f9;
+    text-decoration: none;
+    transition: ease-in-out 0.2s;
+}
+
+.site-footer a:hover {
+    color: #d1b8c5;
+    text-decoration: none;
+}
+
+.site-footer .row .align-self-center { /* modify the align-self-center class in the footer because it's hard-coded in the template */
+    -ms-flex-item-align: flex-start !important;
+    align-self: flex-start !important;
+}
+
+.footer-brand-image {
+    max-width: 92px;
+}
+
+/* 2.5 Tooltips */
+
+.hint {
+  position: relative;
+  display: inline-block;
+  color: #610c3a;
+}
+
+.hint .hint-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #610c3a;
+  color: #fcfcfc;
+  border-radius: 10px;
+  padding: 10px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hint .hint-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #610c3a transparent transparent transparent;
+}
+
+.hint:hover .hint-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* 3. Styling */
+
+.btn { /* Buttons */
+    border-radius: 10px;
+    border: 1px solid #a18a96;
+    color: #775d6b;
+    text-transform: uppercase;
+}
+
+.btn-primary { /* Main (violet) buttons */
+    border-radius: 20px 40px 40px 20px;
+    border-color: #48092b !important;
+    color: #fcfcfc;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background: #161413;
+    border-color: #161413 !important;
+    color: #fcfcfc;
+}
+
+.modal-content .btn-primary { /* Buttons in modals with violet backgrounds */
+    background: transparent;
+    border-radius: 10px !important;
+    border-color: #fcfcfc44;
+    color: #fcfcfcaa;
+    text-transform: uppercase;
+    transition: ease-in-out 0.2s;
+}
+
+.modal-content .btn-primary:hover {
+    background: transparent;
+    border-color: #fcfcfc77;
+    color: #fcfcfc;
+}
+
+.form-control { /* Forms */
+    background-color: #fcfcfc;
+}
+
+
+.form-control:hover {
+    border-color: #d1b8c5;
+}
+
+.form-control:focus {
+
+    color: #495057;
+    background-color: #fff;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #d1b8c5;
+}
+
+@media (max-width: 575px) { /* Lists with images on the side */
+    .list-img {
+        text-align: center !important;
+    }
+
+    .list-img > img {
+        width: 150px !important;
+        margin-bottom: 2rem;
+    }
+}
+
+/* 4. Page-specific */
+
+/* 4.1 Homepage */
+
+/* 4.1.1 Homepage issue */
+
+.homepage-image-behind-issue::after {
+    background: rgba(0,0,0,0.2);
+}
+
+.homepage-issue-current { /* 'CURRENT ISSUE' text */
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.homepage-issue-cover { /* Cover image */
+    width: 210px;
+    height: 297px;
+}
+
+.homepage-issue-identifier {
+	display: none;
+}
+
+.homepage-issue-published { /* Date issue was published */
+    margin-top: 1.5rem !important;
+}
+
+.homepage-issue-description-wrapper { /* Issue description box */
+    background: #f7f7f7;
+    box-shadow: 0 0 10px #610c3a;
+    height: 297px;
+    padding: 2.8rem 3rem;
+}
+
+.homepage-issue-description .h2 {
+    color: #161413;
+    font-family: 'Fira Sans';
+    font-weight: 300;
+}
+
+.homepage-issue-description p {
+    color: #161413;
+}
+
+.homepage-issue-description-more > a {
+    padding: .5em 1em;
+    border-radius: 10px;
+    border: 1px solid #a18a96;
+    background: transparent;   
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+	color: #775d6b;
+	font-size: 1rem;
+	font-weight: 300;
+    text-transform: uppercase;
+	transition: ease-in-out 0.2s;
+}
+
+.homepage-issue-description-more > a:hover {
+    border-color: #610c3a;
+    color: #610c3a;
+}
+
+.homepage-issue-description::after {
+    background-image: linear-gradient(rgba(255,255,255,0), #f7f7f7 20%);
+}
+
+@media (max-width: 1199px) {
+    .homepage-issue-current {
+        color: #817F7F;
+    }
+
+    .homepage-issue-published {
+        color: #949292;
+    }
+
+    .homepage-issue-description-wrapper { /* Issue description box */
+        background: #fcfcfc;
+        box-shadow: none;
+    }
+
+    .homepage-issue-description::after {
+        background-image: linear-gradient(rgba(255,255,255,0), #fcfcfc 20%);
+    }
+}
+
+/* 4.1.2 Homepage table of contents */
+
+.issue-toc-section-title {
+    font-size: 1.75rem;
+}
+
+.article-summary-authors, .article-summary-pages {
+    font-size: 0.9rem;
+    color: #8E6A7D;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 1.33;
+}
+
+@media (min-width: 992px) {
+	.article-summary-pages {
+		width: 56px;
+	}
+}
+
+.article-summary-title {
+	font-family: 'Lora', serif;
+	font-style: italic;
+}
+
+.article-summary-doi { /* Do not show article DOIs in the table of contents */
+    display: none;
+}
+
+/* 4.1.3 Introduction */
+
+.asean-terms {
+    list-style: none;
+}
+
+.asean-terms li::before {
+    content: "\2aa2"; 
+    color: #610c3a;
+    font-size: 1rem;
+    display: inline-block; 
+    width: 2.5rem;
+    margin-left: -2.5rem;
+}
+
+/* 4.2 Article page */
+
+.article-details-issue-identifier a {
+    font-family: 'Fira Sans';
+    color: #817F7F;
+    font-size: 1.15rem;
+}
+
+.article-details-issue-section {
+    color: #817F7F;
+}
+
+.article-details-published {
+    color: #817F7F;
+}
+
+.authors-string {
+    font-size: 1.25rem;
+}
+
+.authors-string a {
+    border-bottom: 0px solid #d1b8c5;
+}
+
+/* 4.3 Contact page */
+
+.contact-name {
+    font-size: 16px;
+}
+
+.contact-affiliation {
+    font-size: 16px;  
+}
+
+.contact-email {
+    font-size: 16px;
+}
+
+/* 4.4 Submissions page */
+
+.submissions-checklist ul {
+    margin-top: 1rem;
+    list-style: none;
+}
+
+.submissions-checklist ul li::before {
+    content: "\2aa2"; 
+    color: #610c3a;
+    font-size: 1rem;
+    display: inline-block; 
+    width: 2.5rem;
+    margin-left: -2.7rem;
+}
+
+/* 4.5 FAQ page */
+
+.faq-return a {
+    color: #8E6A7D;
+    transition: ease-in-out 0.2s;
+}
+
+.faq-return a:hover {
+    color: #610c3a;
+    text-decoration: none;
+}
