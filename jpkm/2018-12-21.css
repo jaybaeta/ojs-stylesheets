@@ -1,0 +1,152 @@
+/* ========================================================================
+
+   JPKM stylesheet 
+   Ver 1.0; 21 December 2018
+   (c) 2018 Joaquim Baeta; GPLv3
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+   ------------------------------------------------------------------------
+
+   Table of contents 
+     
+   1. Typography
+   2. Main
+   3. Header
+   4. Navbar
+   5. Sidebar
+   6. Breadcrumbs
+
+   ======================================================================== */
+
+/* 1. Typography */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+a:link, a:visited, a:active {
+  color: #B08F68;
+  transition: ease-in-out 0.25s;
+}
+
+a:hover {
+  color: #1D3842;
+  text-decoration: none;
+}
+
+/* 2. Main */
+
+#container {
+  background-image: none !important;
+  background: #fff
+}
+
+/* 3. Header */
+
+#header {
+  background-color: #D1BA9F;
+  background-image: none !important;;
+}
+
+#headerTitle {
+  background: #D1BA9F;
+}
+
+#header h1 {
+  color: #1D3842;
+  text-shadow: none;
+  padding: 0 !important;
+  line-height: 3;
+  margin-top: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+    	line-height: 1.33;
+    }
+}
+
+#header h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5rem;
+  color: #1D3842;
+  font-weight: 300;
+}
+
+/* 4. Navbar */
+
+#navbar {
+  background-color: #D1BA9F;
+  color: #1D3842;
+  text-align: center;
+}
+
+#navbar a, #navbar a:link, #navbar a:visited {
+  color: #1D3842;
+}
+
+#navbar a:hover {
+  background: #1D3842;
+  color: #fff;
+  text-shadow: none;
+  border-radius: 5px;
+}
+
+/* 5. Sidebar */
+
+#rightSidebar {
+  border-left: 1px solid #D1BA9F;
+}
+
+#leftSidebar, #rightSidebar {
+  margin: 86px 0 0 0;
+}
+
+#leftSidebar div.block span.blockTitle, #rightSidebar div.block span.blockTitle {
+  padding: 0.7rem 0;
+  background: transparent;
+  color: #1D3842;
+  border-bottom: 1px solid #D1BA9F;
+}
+
+ul.sidemenu li a {
+  padding: .7em 12px .7em 12px;
+  border-bottom: none;
+  background-color: transparent;
+  text-decoration: none;
+  color: #B08F68;
+}
+
+ul.sidemenu li a:hover {
+  background-color: transparent;
+  text-decoration: none;
+  color: #1D3842;
+
+}
+
+ul.sidemenu li:first-child a {
+  border-top: none;
+}
+
+.block li::before {
+  border-color: transparent #B08F68;
+}
+
+/* 6. Breadcrumbs */
+
+#breadcrumb {
+  border-bottom: 1px solid #D1BA9F;
+}
