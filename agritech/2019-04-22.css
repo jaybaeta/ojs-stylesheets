@@ -1,0 +1,404 @@
+/* ===================
+   Agritech stylesheet 
+   Ver X: 21-4-2019
+   Copyright 2018 Joaquim Baeta <mail@joaquimbaeta.com>
+                  Black <https://danny-pradana.namaku.pro>
+				  				  
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+   
+	1. 	Typography (Font Tulisan)
+		Reference: https://fonts.google.com/
+	2.	Main Container
+		Bug Fixed on left Nusantara2SteelBlue Themes
+			- The sidebar not appear on desktop and tablet
+			- Container isn't looking good on all device (Tablet)
+			- Etc
+	3.	Header & Menu
+	4.	Navbar
+		Bug Fixed on left column on Nusantara2SteelBlue Themes
+			- The The menu not on a center position
+			- Etc
+	5.	Sidebar
+		
+
+   =================== */
+
+
+/* 1. TYPOGRAPHY (Font Tulisan) */
+
+		@import url('https://fonts.googleapis.com/css?family=Expletus+Sans|Titillium+Web');
+
+		h3,h4,h5,h6,p,a,span{
+			font-family: 'Titillium Web', sans-serif !important;
+		}
+		h1,h2{
+			font-family: 'Expletus Sans', cursive !important;
+		}
+/* 2. MAIN Container */
+
+		#container {
+			background-image: none !important;
+			background: #fff;
+		}
+
+		a {
+			transition: ease-in-out 0.15s;
+		}
+
+		a:hover {
+			text-decoration: none !important;
+			color: #26142b !important;
+		}
+
+		a:active, a:link, a:visited {
+			color: #9e262a;
+			text-decoration: none;
+		}
+
+		ul li a, .block p a{
+			text-decoration: none !important;
+			transition: ease-in-out 0.15s;
+		}
+
+		ul li a:hover, .block p a:hover {
+			color: #9e262a !important;
+		}
+
+/* 3. HEADER */
+
+		#header {
+			background: #26142b;
+			min-height: 210px;
+		}
+
+		#header h1 {
+			font-family: 'Expletus Sans' !important;
+			font-size: 4rem;
+			color: #e6e0e8;
+			text-shadow: none;
+			text-align: center;
+			line-height: 0;
+			margin-top: 4rem;
+			margin-bottom: 4rem;
+		}
+
+		#header h5 {
+			color: #a592ab;
+			text-align: center;
+		}
+
+/* 4. NAVBAR */
+
+		#navbar {
+			background-color: #26142b;
+		}
+
+		#navbar a {
+			transition: ease-in-out 0.15s;
+		}
+
+		#navbar a:hover {
+			background: #26142b;
+			text-shadow: none;
+			color: #9e262a !important;
+		}
+
+/* 5. SIDEBAR */
+
+ul.sidemenu li:first-child a {
+    border-top: none;
+}
+
+ul.sidemenu li a, #rightSidebar div p a, .block ul li a, .block a {
+    background-color: #EAEAEA !important;
+    color: #26142B !important;
+}
+
+ul.sidemenu li a:hover, #rightSidebar div p a:hover, .block ul li a:hover, .block a:hover {
+	background-color: #fff;
+	color: #9E262A !important;
+}
+
+.block li:before {
+  border-color: transparent #306998;		
+}
+
+ul.sidemenu li a {
+    border-bottom: none;
+}
+
+#leftSidebar div.block span.blockTitle, #rightSidebar div.block span.blockTitle {
+    background-color: #EAEAEA !important;
+    color: #9E262A !important;
+    border-bottom: 1px #9E262A solid;
+}
+
+#leftSidebar div.block span.blockTitle, #rightSidebar div.block span.blockTitle {
+	padding: 5px !important;
+    margin-bottom: 12px;
+    background: none;
+}
+
+#sidebarUser form table tr td input {
+    width: 6.5em !important;
+    margin-top: 5px;
+}
+#sidebarUser form table tr td input[type="checkbox"] {
+    width: 1em;
+}
+ul.sidemenu.full {
+    margin: 0;
+}
+.block, .block p, .block p a, .block span {
+    background-color: #EAEAEA !important;
+    padding: 5px !important;
+}
+#rightSidebar {
+    padding-left: 5px;
+}
+ul.sidemenu li a {
+    background-color: #26142B!important;
+    margin-top: 2px;
+    color: #EAEAEA!important;
+}
+#rightSidebar {
+    border: 0px solid #000;
+}
+
+/* Pengaturan Tulisan Description */
+#journalDescription > p:first-child:first-letter, #pkp-about-history > p:first-child:first-letter {
+	float: left;
+	color: #333;
+	font-size: 75px;
+	line-height: 60px;
+	padding: 5px 10px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Announcement */
+
+@media (max-width: 480px){
+	#journalDescription {
+		width: 90% !important;
+	}
+	.logo-bottom{
+		float: none !important;
+		margin-bottom: 15px;
+		display:block;
+	}
+	p.text-logo{
+		text-align:justify !important;
+	}
+	img.logo-bottom {
+		margin: 0 auto;    
+	}
+	#navbar.opened{
+		margin-top:40px;
+		margin-left: 0px;
+	}
+}
+@media (min-width:481px){
+	#journalDescription {
+		width: 100% !important;
+	}
+	#pageFooter p span.text {
+		display: -webkit-box;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media (min-width:1024px){
+	#leftSidebar {
+		width: 180px;
+		display: block;
+	}
+	#navbar {
+		margin-top: -45px;
+		margin-left: -9%;
+	}
+	#body {
+		margin: 0px !important;
+		width:100%;
+	}
+}
+@media (min-width: 1081x){
+	#container{
+		overflow:hidden;
+	}
+	#navbar {
+		margin-left: -12%;
+	}
+}
+/** Additional Setting For centering the Nav on Desktop And Big Screen **/
+@media screen and (min-width: 1280px) {
+	#navbar {
+		margin-left: -15%;
+	}
+}
+
+@media (min-width: 768px) and (max-width:1024px){
+	#journalDescription {
+		width: 100% !important;
+	}
+	#pageFooter p span.text {
+		display: -webkit-box;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	/** Left Style **/
+	#leftSidebar {
+		width: 180px;
+		display: block;
+	}
+	#navbar {
+		margin-top: -45px;
+		margin-left: -9%;
+	}
+	#body {
+		margin: 0px;
+		width:100%;
+	}
+	#main {
+		width: 78%;
+	}
+	#navbar {
+		margin-top: -45px;
+		margin-left: -25%;
+    /* overflow: scroll; */
+		display: block;
+		width: 1024px;
+	}
+	#container {
+		width: 1080px !important;
+		min-width: 730px !important;
+		margin: 0px auto;
+		text-align: center;
+	}
+}
+
+#announcementsHome h3 {
+	color:#26142b !important;
+}
+/**table announcement**/
+.announcements tbody tr td h4,.announcements tbody tr td p,table.announcements td.posted,table.announcements td.description{
+	color:#26142b !important;
+}
+#announcementsHome {
+    margin:0px !important;
+}
+
+#content h3 {
+    margin: 0px !important;
+    padding-top: 0.3em !important;
+	font-size: 1.4em !important
+}/**
+#content h4{
+	padding-left: 15px;
+}
+#journalDescription {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#content{
+	padding-right:25px;
+}
+table.announcements {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+**/
+
+table.announcementsMore {
+    padding-bottom: 20px;
+}
+table.announcementsMore tbody tr td a {
+    padding: 15px;
+    margin-right: 5px;
+    color: #26142b;
+}
+#main h2 {
+    margin: 0px !important;
+	padding-top: 0.5em;
+	padding-bottom: .5em;
+}
+
+#pageFooter p a img, .indexers a img, #customblock-Tools p img{
+    width: 100px;
+	filter: sepia(100%) hue-rotate(250deg) saturate(100%);
+}
+#pageFooter p a img:hover{
+	filter:grayscale(0%);
+}
+.indexers a img:hover{
+    filter: sepia(100%) hue-rotate(300deg) saturate(390%);
+}
+#pageFooter p {
+    text-align: center;
+}
+#pageFooter h3 {
+    text-align: center;
+}
+
+/**Form **/
+#sidebarUser form table tr td input {
+    width: 6.5em;
+    margin-top: 5px;
+}
+
+/** Article **/
+.tocArticle {
+    border-bottom: 1px solid #d2d2d2;
+}
+table.tocArticle tr {
+    background-color: #fff !important;
+}
+.tocAuthors, table.tocArticle a {
+	font-style:normal;
+}
+
+/** Menu Navigation Mobile **/
+	#main a.nav-toggle {
+		background-color: #9E262A;
+		color: #fff!important;
+	}
+	#main a.nav-toggle {
+		background-color: #9E262A;
+		color: #fff!important;
+	}
+	div#navbar ul li a{
+		color: #fff!important;
+	}
+/** Side Menu **/
+ul.sidemenu li a {
+    padding: .3em 12px .3em 12px;
+}
+
+/**logo bottom**/
+
+.logo-bottom{
+    float: left;
+    padding: 5px;
+    margin-top: 15px;
+	width:150px;
+} 
