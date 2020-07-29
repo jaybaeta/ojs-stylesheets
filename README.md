@@ -4,6 +4,8 @@ This repo contains the custom stylesheets I've written (or taken part in writing
 
 All are licensed under the GPL and therefore reusable, but I advise against copying them verbatim, for the simple reason that copying another journal's brand can harm their identifiability (and yours). The purpose of this repo is, therefore, a) to ensure that these stylesheets will always be publicly accessible, b) to aid other developers looking for inspiration or some of the hacks I use to avoid needing to touch the template files themselves, and c) to ensure that the licenses of the respective stylesheets are maintained. On the last point, in particular, my decision to create this repo was directly motivated by a recent (as of 15 April 2019) incident in which a journal secretly removed its copyright statement, GPL license, and attribution—essentially stealing credit and claiming someone else's copyright.
 
+**To reiterate: please do not copy the code without modifying it and claim another journal's identity as your own.**
+
 ## Stylesheets
 
 ### _AGRITECH_
