@@ -10,28 +10,28 @@ All are licensed under the GPL and therefore reusable, but I advise against copy
 
 Website: http://jurnal.ugm.ac.id/agritech  
 Based on: Nusantara2columnsSteelBlue  
-Copyright: Joaquim Baeta/Black
+Copyright: Joaquim Baeta/Black  
 License: GPLv3
 
 ### _ASEAN Journal on Science and Technology for Development_
 
 Website: http://ajstd.org  
 Based on: Health Sciences
-Copyright: Joaquim Baeta
+Copyright: Joaquim Baeta  
 License: GPLv3
 
 ### _Indonesian Journal of Biotechnology_
 
 Website: http://jurnal.ugm.ac.id/ijbiotech  
 Based on: Nusantara2columnsSteelBlue  
-Copyright: Joaquim Baeta
+Copyright: Joaquim Baeta  
 License: GPLv3
 
 ### _Jurnal Pengabdian kepada Masyarakat_
 
 Website: http://jurnal.ugm.ac.id/jpkm  
 Based on: Nusantara2columnsSteelBlue  
-Copyright: Joaquim Baeta/Serena Pynta
+Copyright: Joaquim Baeta/Serena Pynta  
 License: GPLv3
 
 ## Original themes
