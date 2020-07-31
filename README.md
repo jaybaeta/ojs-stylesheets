@@ -18,7 +18,7 @@ License: GPLv3
 ### _ASEAN Journal on Science and Technology for Development_
 
 Website: http://ajstd.org  
-Based on: Health Sciences
+Based on: Health Sciences  
 Copyright: Joaquim Baeta  
 License: GPLv3
 
